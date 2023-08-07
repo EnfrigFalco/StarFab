@@ -8,8 +8,8 @@ toolbox enter fedora
 sudo dnf -y update
 
 # Debian
-toolbox create --image quay.io/
-
+toolbox create --image quay.io/toolbx-images/debian-toolbox:12
+toolbox enter debian-toolbox-12
 
 # Arch
 toolbox create --image quay.io/toolbx-images/archlinux-toolbox
