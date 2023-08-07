@@ -1,5 +1,5 @@
 # StarFab - Linux Compile Guide
-Guide for compiling StarFab on Linux distos using toolbox. Although toolbox is not necassary it is recommended to avoid filling the host OS with hundred of dev packages.
+Guide for compiling StarFab on Linux distos. Although not necassary, it is reccomended to use toolbox or podman container to avoid filling the host OS with hundred of dev packages.
 ## Create a container for whichever distro you favour
 ```
 # Fedora
