@@ -2,38 +2,37 @@
 Guide for compiling StarFab on Linux distos. Although not necassary, it is reccomended to use toolbox or podman container to avoid filling the host OS with hundred of dev packages.
 (optional) ## Create a container for whichever distro you favour
 ```
-# Fedora
-toolbox create --image fedoraproject.org/fedora-toolbox:38
-toolbox enter fedora
-sudo dnf -y update
+# Arch
+toolbox create --image quay.io/toolbx-images/archlinux-toolbox
+toolbox enter archlinux-toolbox
+sudo pacman -Syu
 
 # Debian
 toolbox create --image quay.io/toolbx-images/debian-toolbox:12
 toolbox enter debian-toolbox-12
 sudo apt update && sudo apt upgrade -y
 
-# Arch
-toolbox create --image quay.io/toolbx-images/archlinux-toolbox
-toolbox enter archlinux-toolbox
-sudo pacman -Syu
+# Fedora
+toolbox create --image fedoraproject.org/fedora-toolbox:38
+toolbox enter fedora
+sudo dnf -y update
 ```
+
+
 ## 1. Get distro specific packages for compiling StarFab
 ```
-#Fedora
-sudo dnf -y groupinstall "Development Tools" "Development Libraries"
-sudo dnf -y install poetry qt5-qtbase-devel libXcomposite libXdamage libXrandr libXcursor libXi libXtst alsa-lib pulseaudio-libs pulseaudio-libs-glib2
-sudo dnf -y builddep python3
-
-# Debian
-sudo apt install -y build-essential python3-poetry qtbase5-dev libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libasound2 libpulse-mainloop-glib0
-
 # Arch
 sudo pacman -S  --needed base-devel poetry qtbase pyenv openssl zlib xz tk
 
 libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
 
+# Debian
+sudo apt install -y build-essential python3-poetry qtbase5-dev libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libasound2 libpulse-mainloop-glib0
 
-
+#Fedora
+sudo dnf -y groupinstall "Development Tools" "Development Libraries"
+sudo dnf -y install poetry qt5-qtbase-devel libXcomposite libXdamage libXrandr libXcursor libXi libXtst alsa-lib pulseaudio-libs pulseaudio-libs-glib2
+sudo dnf -y builddep python3
 ```
 ## 2. Install PyEnv for bash shell
 [more info](https://github.com/pyenv/pyenv)
