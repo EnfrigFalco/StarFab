@@ -58,10 +58,10 @@ poetry install
 #poetry run python -m pip install -e ../../frameworks/scdatatools
 #pip install -e ../../frameworks/scdatatools
 ```
-## Environment Variables
+## Fix Qt bug for sway, hypr and other wayland compositors
+[more info](https://bugreports.qt.io/browse/QTBUG-81504)
 ```
-    #export QT_QPA_PLATFORM=wayland
-    # Sway and Hyprland bug: https://bugreports.qt.io/browse/QTBUG-81504
+# Sway and Hyprland bug: 
 export QT_QPA_PLATFORM=xcb
 export WAYLAND_DEBUG=client
 export QT_DEBUG_PLUGINS=1
