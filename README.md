@@ -1,6 +1,6 @@
 # StarFab - Linux Compile Guide
 Guide for compiling StarFab on Linux distos. Although not necassary, it is reccomended to use toolbox or podman container to avoid filling the host OS with hundred of dev packages.
-(optional) ## Create a container for whichever distro you favour
+## (optional) Create a container for whichever distro you favour
 ```
 # Arch
 toolbox create --image quay.io/toolbx-images/archlinux-toolbox
@@ -17,8 +17,6 @@ toolbox create --image fedoraproject.org/fedora-toolbox:38
 toolbox enter fedora
 sudo dnf -y update
 ```
-
-
 ## 1. Get distro specific packages for compiling StarFab
 ```
 # Arch
