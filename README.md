@@ -82,14 +82,3 @@ poetry install
 ```
 poetry run python -m starfab
 ```
----
----
-Additional notes for compiling using other Linux distributions:
-### Arch
-```
-# Create an Arch container
-toolbox create --image quay.io/toolbx-images/archlinux-toolbox
-toolbox enter archlinux-toolbox
-
-# Install packages
-```
