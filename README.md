@@ -50,7 +50,7 @@ cd scmodding
 git clone https://gitlab.com/scmodding/tools/starfab.git tools/starfab
 git clone https://gitlab.com/scmodding/frameworks/scdatatools.git frameworks/scdatatools
 ```
-## Fix VTK dependancy bug
+## 4. Fix VTK dependancy bug
 [more info](https://gitlab.com/scmodding/tools/starfab/-/issues/70)
 ```
 cd tools/starfab
@@ -59,13 +59,13 @@ rm poetry.lock
 # use editor to remove [[tool.poetry.dependencies.vtk]] entries
 nano pyproject.toml 
 ```
-## 4. Install recommended python using pyenv
+## 5. Install recommended python using pyenv
 ```
 pyenv install 3.10.2
 pyenv shell 3.10.2
 pyenv local 3.10.2
 ```
-## 5. Setup python environment
+## 6. Setup python environment
 ```
 python -m venv .venv
 source .venv/bin/activate
@@ -80,11 +80,11 @@ poetry env use python
 export QT_QPA_PLATFORM=xcb
 ```
 
-## 6. Build StarFab
+## 7. Build StarFab
 ```
 poetry install
 ```
-## 7. Run StarFab
+## 8. Run StarFab
 *note: after splash screen UI can take sometime to appear
 ```
 poetry run python -m starfab
