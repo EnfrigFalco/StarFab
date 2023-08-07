@@ -18,9 +18,14 @@ sudo pacman -Syu
 ```
 ## Get distro specific packages for compiling StarFab
 ```
+#Fedora
 sudo dnf -y groupinstall "Development Tools" "Development Libraries" 
 sudo dnf -y builddep python3
 sudo dnf -y install poetry qt5-qtbase-devel libXcomposite libXdamage libXrandr libXcursor libXi libXtst alsa-lib pulseaudio-libs pulseaudio-libs-glib2
+
+# Debian
+
+# Arch
 ```
 ## Install PyEnv for bash shell
 [more info](https://github.com/pyenv/pyenv)
