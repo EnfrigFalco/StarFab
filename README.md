@@ -31,7 +31,7 @@ sudo apt install -y gdb lcov pkg-config libbz2-dev libffi-dev libgdbm-dev libgdb
 
 # Uncomment deb-src from sources.list
 
-echo 'deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware' >> ~/.bashrc
+sudo echo 'deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware' >> /etc/apt/sources.list.d/debian.sources
 
 sudo nano /etc/apt/sources.list.d/debian.sources
 sudo apt build-dep python3
