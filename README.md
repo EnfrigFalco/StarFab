@@ -42,9 +42,6 @@ nano pyproject.toml
 pyenv install 3.10.2
 pyenv shell 3.10.2
 pyenv local 3.10.2
-
-# check current python version with
-pyenv versions
 ```
 ## Setup python environment
 ```
