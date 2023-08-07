@@ -12,6 +12,7 @@ toolbox create --image quay.io/toolbx-images/debian-toolbox:12
 toolbox enter debian-toolbox-12
 sudo apt update && sudo apt upgrade -y
 
+
 # Arch
 toolbox create --image quay.io/toolbx-images/archlinux-toolbox
 toolbox enter archlinux-toolbox
@@ -27,6 +28,9 @@ sudo dnf -y builddep python3
 # Debian
 sudo apt install -y build-essential python3-poetry qtbase5-dev
 sudo apt install -y gdb lcov pkg-config libbz2-dev libffi-dev libgdbm-dev libgdbm-compat-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev lzma lzma-dev tk-dev uuid-dev zlib1g-dev pkg-config
+
+# Uncomment deb-src from sources.list
+sudo nano /etc/apt/sources.list
 sudo apt build-dep python3
 
 # Arch
