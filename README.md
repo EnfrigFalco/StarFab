@@ -26,15 +26,10 @@ sudo dnf -y install poetry qt5-qtbase-devel libXcomposite libXdamage libXrandr l
 sudo dnf -y builddep python3
 
 # Debian
-sudo apt install -y build-essential python3-poetry qtbase5-dev
-sudo apt install -y gdb lcov pkg-config libbz2-dev libffi-dev libgdbm-dev libgdbm-compat-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev lzma lzma-dev tk-dev uuid-dev zlib1g-dev pkg-config
+sudo apt install -y build-essential python3-poetry qtbase5-dev libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
-# Uncomment deb-src from sources.list
 
-sudo echo 'deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware' >> /etc/apt/sources.list.d/debian.sources
-
-sudo nano /etc/apt/sources.list.d/debian.sources
-sudo apt build-dep python3
+libXcomposite libXdamage libXrandr libXcursor libXi libXtst alsa-lib pulseaudio-libs pulseaudio-libs-glib2
 
 # Arch
 sudo pacman -S pyenv qtbase tk poetry glu nss libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
