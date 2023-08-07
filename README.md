@@ -1,5 +1,5 @@
-# StarFab - Linux Guide
-Guide for running StarFab on Linux distos using toolbox (podman) container to avoid flooding OS with hundred of packages. Guide assumes you are using toolbox with a Fedora OCI, process basically the same, see bottom for extra info on other distributions.
+# StarFab - Linux Compile Guide
+Guide for compiling StarFab on Linux distos using toolbox. Although toolbox is not necassary it is recommended to avoid filling the host OS with hundred of dev packages.
 ## Setup a container for your favourite distro
 ```
 # Fedora
