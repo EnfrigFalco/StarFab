@@ -1,6 +1,6 @@
 # StarFab - Linux Compile Guide
 Guide for compiling StarFab on Linux distos using toolbox. Although toolbox is not necassary it is recommended to avoid filling the host OS with hundred of dev packages.
-## Setup a container for your favourite distro
+## Create a container for whichever distro you favour
 ```
 # Fedora
 toolbox create --image fedoraproject.org/fedora-toolbox:38
