@@ -40,29 +40,40 @@ nano pyproject.toml # delete [[tool.poetry.dependencies.vtk]] entries
 ```
 
 # Install specific python using pyenv
+```
 pyenv install 3.10.2
 pyenv shell  
 pyenv local 3.10.2
 pyenv versions
+```
 
 # Setup python environment
+```
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip wheel vtk
 poetry env use python
+```
 
 
 # Build StarFab
+```
 poetry install
 #poetry run python -m pip install -e ../../frameworks/scdatatools
 #pip install -e ../../frameworks/scdatatools
+```
 
 # Environment Variables
+```
     #export QT_QPA_PLATFORM=wayland
     # Sway and Hyprland bug: https://bugreports.qt.io/browse/QTBUG-81504
 export QT_QPA_PLATFORM=xcb
 export WAYLAND_DEBUG=client
 export QT_DEBUG_PLUGINS=1
+```
 
-# Run StarFab, after splash screen UI can take sometime to appear, keep eye on terminal to spot for errors
+# Run StarFab
+after splash screen UI can take sometime to appear, keep eye on terminal to spot for errors
+```
 poetry run python -m starfab
+```
