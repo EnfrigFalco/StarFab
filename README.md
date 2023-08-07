@@ -24,18 +24,13 @@ sudo dnf -y groupinstall "Development Tools" "Development Libraries"
 sudo dnf -y install poetry qt5-qtbase-devel libXcomposite libXdamage libXrandr libXcursor libXi libXtst alsa-lib pulseaudio-libs pulseaudio-libs-glib2
 sudo dnf -y builddep python3
 
-
-# Arch
-sudo pacman -S pyenv qtbase tk poetry glu nss libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
-
 # Debian
 sudo apt install -y build-essential python3-poetry qtbase5-dev
 sudo apt install -y gdb lcov pkg-config libbz2-dev libffi-dev libgdbm-dev libgdbm-compat-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev lzma lzma-dev tk-dev uuid-dev zlib1g-dev pkg-config
 sudo apt build-dep python3
 
-
-
-
+# Arch
+sudo pacman -S pyenv qtbase tk poetry glu nss libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
 ```
 ## Install PyEnv for bash shell
 [more info](https://github.com/pyenv/pyenv)
