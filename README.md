@@ -1,4 +1,4 @@
-# StarFab
+# StarFab - Linux Guide
 Guide for running StarFab on Linux distos using toolbox (podman) container to avoid flooding OS with hundred of packages.
 
 ## Setup a container
@@ -23,7 +23,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 exec "$SHELL"
 ```
 
-# Setup Git
+## Setup Git
 ```
 mkdir -p scmodding-fedora/{tools,frameworks}/
 cd scmodding-fedora
@@ -31,7 +31,7 @@ git clone https://gitlab.com/scmodding/tools/starfab.git tools/starfab
 git clone https://gitlab.com/scmodding/frameworks/scdatatools.git frameworks/scdatatools
 ```
 
-# Fixing VTK dependancy bug
+## Fixing VTK dependancy bug
 [more info](https://gitlab.com/scmodding/tools/starfab/-/issues/70)
 ```
 cd tools/starfab
@@ -39,7 +39,7 @@ rm poetry.lock
 nano pyproject.toml # delete [[tool.poetry.dependencies.vtk]] entries
 ```
 
-# Install specific python using pyenv
+## Install specific python using pyenv
 ```
 pyenv install 3.10.2
 pyenv shell  
@@ -47,7 +47,7 @@ pyenv local 3.10.2
 pyenv versions
 ```
 
-# Setup python environment
+## Setup python environment
 ```
 python -m venv .venv
 source .venv/bin/activate
@@ -56,14 +56,14 @@ poetry env use python
 ```
 
 
-# Build StarFab
+## Build StarFab
 ```
 poetry install
 #poetry run python -m pip install -e ../../frameworks/scdatatools
 #pip install -e ../../frameworks/scdatatools
 ```
 
-# Environment Variables
+## Environment Variables
 ```
     #export QT_QPA_PLATFORM=wayland
     # Sway and Hyprland bug: https://bugreports.qt.io/browse/QTBUG-81504
@@ -72,7 +72,7 @@ export WAYLAND_DEBUG=client
 export QT_DEBUG_PLUGINS=1
 ```
 
-# Run StarFab
+## Run StarFab
 after splash screen UI can take sometime to appear, keep eye on terminal to spot for errors
 ```
 poetry run python -m starfab
