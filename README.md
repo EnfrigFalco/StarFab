@@ -49,7 +49,7 @@ python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip wheel vtk
 
-# make poetry recongnise pyenv python
+# make poetry recongnise selected pyenv python
 poetry env use python
 ```
 ## Fix Qt bug for sway, hypr and other wayland compositors
