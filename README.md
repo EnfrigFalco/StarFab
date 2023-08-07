@@ -16,7 +16,7 @@ toolbox create --image quay.io/toolbx-images/archlinux-toolbox
 toolbox enter archlinux-toolbox
 sudo pacman -Syu
 ```
-## Get basic dev tools,libraries, python build dependancies, extra packages for compiling StarFab, and a kitchen sink
+## Get distro specific packages for compiling StarFab
 ```
 sudo dnf -y groupinstall "Development Tools" "Development Libraries" 
 sudo dnf -y builddep python3
