@@ -1,6 +1,6 @@
 # StarFab - Linux Compile Guide
 Guide for compiling StarFab on Linux distos. Although not necassary, it is reccomended to use toolbox or podman container to avoid filling the host OS with hundred of dev packages.
-## Create a container for whichever distro you favour
+(optional) ## Create a container for whichever distro you favour
 ```
 # Fedora
 toolbox create --image fedoraproject.org/fedora-toolbox:38
@@ -18,7 +18,7 @@ toolbox create --image quay.io/toolbx-images/archlinux-toolbox
 toolbox enter archlinux-toolbox
 sudo pacman -Syu
 ```
-## Get distro specific packages for compiling StarFab
+## 1. Get distro specific packages for compiling StarFab
 ```
 #Fedora
 sudo dnf -y groupinstall "Development Tools" "Development Libraries"
@@ -36,7 +36,7 @@ sudo apt build-dep python3
 # Arch
 sudo pacman -S pyenv qtbase tk poetry glu nss libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
 ```
-## Install PyEnv for bash shell
+## 2. Install PyEnv for bash shell
 [more info](https://github.com/pyenv/pyenv)
 ```
 curl https://pyenv.run | bash
@@ -45,7 +45,7 @@ echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 exec "$SHELL"
 ```
-## Clone repositories
+## 3. Clone repositories
 ```
 mkdir -p scmodding/{tools,frameworks}/
 cd scmodding
@@ -61,13 +61,13 @@ rm poetry.lock
 # use editor to remove [[tool.poetry.dependencies.vtk]] entries
 nano pyproject.toml 
 ```
-## Install recommended python using pyenv
+## 4. Install recommended python using pyenv
 ```
 pyenv install 3.10.2
 pyenv shell 3.10.2
 pyenv local 3.10.2
 ```
-## Setup python environment
+## 5. Setup python environment
 ```
 python -m venv .venv
 source .venv/bin/activate
@@ -82,11 +82,11 @@ poetry env use python
 export QT_QPA_PLATFORM=xcb
 ```
 
-## Build StarFab
+## 6. Build StarFab
 ```
 poetry install
 ```
-## Run StarFab
+## 7. Run StarFab
 *note: after splash screen UI can take sometime to appear
 ```
 poetry run python -m starfab
