@@ -10,6 +10,7 @@ sudo dnf -y update
 # Debian
 toolbox create --image quay.io/toolbx-images/debian-toolbox:12
 toolbox enter debian-toolbox-12
+sudo apt update && sudo apt upgrade -y
 
 # Arch
 toolbox create --image quay.io/toolbx-images/archlinux-toolbox
