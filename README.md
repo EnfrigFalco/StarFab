@@ -12,7 +12,6 @@ toolbox create --image quay.io/toolbx-images/debian-toolbox:12
 toolbox enter debian-toolbox-12
 sudo apt update && sudo apt upgrade -y
 
-
 # Arch
 toolbox create --image quay.io/toolbx-images/archlinux-toolbox
 toolbox enter archlinux-toolbox
@@ -26,10 +25,7 @@ sudo dnf -y install poetry qt5-qtbase-devel libXcomposite libXdamage libXrandr l
 sudo dnf -y builddep python3
 
 # Debian
-sudo apt install -y build-essential python3-poetry qtbase5-dev libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-
-
-libXcomposite libXdamage libXrandr libXcursor libXi libXtst alsa-lib pulseaudio-libs pulseaudio-libs-glib2
+sudo apt install -y build-essential python3-poetry qtbase5-dev libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libasound2 libpulse-mainloop-glib0
 
 # Arch
 sudo pacman -S pyenv qtbase tk poetry glu nss libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
