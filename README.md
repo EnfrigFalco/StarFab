@@ -1,6 +1,5 @@
 # StarFab - Linux Guide
 Guide for running StarFab on Linux distos using toolbox (podman) container to avoid flooding OS with hundred of packages.
-
 ## Setup a container
 ```
 toolbox create fedora
@@ -13,7 +12,7 @@ sudo dnf -y groupinstall "Development Tools" "Development Libraries"
 sudo dnf -y builddep python3
 sudo dnf -y install poetry qt5-qtbase-devel libXcomposite libXdamage libXrandr libXcursor libXi libXtst alsa-lib pulseaudio-libs pulseaudio-libs-glib2
 ```
-## Install PyEnv
+## Install PyEnv for bash shell
 [more info](https://github.com/pyenv/pyenv)
 ```
 curl https://pyenv.run | bash
@@ -22,47 +21,42 @@ echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 exec "$SHELL"
 ```
-
-## Setup Git
+## Clone repositories
 ```
 mkdir -p scmodding-fedora/{tools,frameworks}/
 cd scmodding-fedora
 git clone https://gitlab.com/scmodding/tools/starfab.git tools/starfab
 git clone https://gitlab.com/scmodding/frameworks/scdatatools.git frameworks/scdatatools
 ```
-
-## Fixing VTK dependancy bug
+## Fix VTK dependancy bug
 [more info](https://gitlab.com/scmodding/tools/starfab/-/issues/70)
 ```
 cd tools/starfab
 rm poetry.lock
 nano pyproject.toml # delete [[tool.poetry.dependencies.vtk]] entries
 ```
-
-## Install specific python using pyenv
+## Install recommended python using pyenv
 ```
 pyenv install 3.10.2
-pyenv shell  
+pyenv shell 3.10.2
 pyenv local 3.10.2
+# check with
 pyenv versions
 ```
-
 ## Setup python environment
 ```
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip wheel vtk
+# make poetry recongnise pyenv python
 poetry env use python
 ```
-
-
 ## Build StarFab
 ```
 poetry install
 #poetry run python -m pip install -e ../../frameworks/scdatatools
 #pip install -e ../../frameworks/scdatatools
 ```
-
 ## Environment Variables
 ```
     #export QT_QPA_PLATFORM=wayland
@@ -71,7 +65,6 @@ export QT_QPA_PLATFORM=xcb
 export WAYLAND_DEBUG=client
 export QT_DEBUG_PLUGINS=1
 ```
-
 ## Run StarFab
 after splash screen UI can take sometime to appear, keep eye on terminal to spot for errors
 ```
