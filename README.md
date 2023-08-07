@@ -47,7 +47,7 @@ exec "$SHELL"
 ```
 ## Clone repositories
 ```
-mkdir -p scmodding-fedora/{tools,frameworks}/
+mkdir -p scmodding/{tools,frameworks}/
 cd scmodding-fedora
 git clone https://gitlab.com/scmodding/tools/starfab.git tools/starfab
 git clone https://gitlab.com/scmodding/frameworks/scdatatools.git frameworks/scdatatools
