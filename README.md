@@ -1,5 +1,5 @@
 # StarFab - Linux Guide
-Guide for running StarFab on Linux distos using toolbox (podman) container to avoid flooding OS with hundred of packages.
+Guide for running StarFab on Linux distos using toolbox (podman) container to avoid flooding OS with hundred of packages. Guide assumes you are using Fedora, process basically the same, see bottom for extra info on other distributions.
 ## Setup a container
 ```
 toolbox create fedora
