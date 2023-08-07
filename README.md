@@ -50,7 +50,7 @@ cd scmodding
 git clone https://gitlab.com/scmodding/tools/starfab.git tools/starfab
 git clone https://gitlab.com/scmodding/frameworks/scdatatools.git frameworks/scdatatools
 ```
-## 4. Fix VTK dependancy bug (Aug, 2023 - Ver: 0.4.8
+## 4. Fix VTK dependancy bug (Aug, 2023 - Ver: 0.4.8)
 [more info](https://gitlab.com/scmodding/tools/starfab/-/issues/70)
 ```
 cd tools/starfab
