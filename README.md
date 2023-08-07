@@ -1,6 +1,6 @@
 # StarFab - Linux Guide
 Guide for running StarFab on Linux distos using toolbox (podman) container to avoid flooding OS with hundred of packages. Guide assumes you are using toolbox with a Fedora OCI, process basically the same, see bottom for extra info on other distributions.
-## Setup a container
+## Setup a container for your favourite distro
 ```
 # Fedora
 toolbox create --image fedoraproject.org/fedora-toolbox:38
