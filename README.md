@@ -33,6 +33,7 @@ git clone https://gitlab.com/scmodding/frameworks/scdatatools.git frameworks/scd
 ```
 cd tools/starfab
 rm poetry.lock
+
 # use editor to remove [[tool.poetry.dependencies.vtk]] entries
 nano pyproject.toml 
 ```
@@ -41,6 +42,7 @@ nano pyproject.toml
 pyenv install 3.10.2
 pyenv shell 3.10.2
 pyenv local 3.10.2
+
 # check current python version with
 pyenv versions
 ```
@@ -49,6 +51,7 @@ pyenv versions
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip wheel vtk
+
 # make poetry recongnise pyenv python
 poetry env use python
 ```
