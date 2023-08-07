@@ -61,8 +61,6 @@ export QT_QPA_PLATFORM=xcb
 ## Build StarFab
 ```
 poetry install
-#poetry run python -m pip install -e ../../frameworks/scdatatools
-#pip install -e ../../frameworks/scdatatools
 ```
 ## Run StarFab
 *note: after splash screen UI can take sometime to appear
