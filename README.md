@@ -30,7 +30,10 @@ sudo apt install -y build-essential python3-poetry qtbase5-dev
 sudo apt install -y gdb lcov pkg-config libbz2-dev libffi-dev libgdbm-dev libgdbm-compat-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev lzma lzma-dev tk-dev uuid-dev zlib1g-dev pkg-config
 
 # Uncomment deb-src from sources.list
-sudo nano /etc/apt/sources.list
+
+echo 'deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware' >> ~/.bashrc
+
+sudo nano /etc/apt/sources.list.d/debian.sources
 sudo apt build-dep python3
 
 # Arch
@@ -41,7 +44,7 @@ sudo pacman -S pyenv qtbase tk poetry glu nss libxcomposite libxdamage libxrandr
 ```
 curl https://pyenv.run | bash
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> /etc/apt/sources.list.d/debian.sources
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 exec "$SHELL"
 ```
