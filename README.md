@@ -67,7 +67,7 @@ poetry install
 
 ```
 ## Run StarFab
-after splash screen UI can take sometime to appear, keep eye on terminal to spot for errors
+*note: after splash screen UI can take sometime to appear
 ```
 poetry run python -m starfab
 ```
