@@ -52,19 +52,19 @@ python -m pip install --upgrade pip wheel vtk
 # make poetry recongnise pyenv python
 poetry env use python
 ```
+## Fix Qt bug for sway, hypr and other wayland compositors
+[more info](https://bugreports.qt.io/browse/QTBUG-81504)
+```
+export QT_QPA_PLATFORM=xcb
+```
+
 ## Build StarFab
 ```
 poetry install
 #poetry run python -m pip install -e ../../frameworks/scdatatools
 #pip install -e ../../frameworks/scdatatools
 ```
-## Fix Qt bug for sway, hypr and other wayland compositors
-[more info](https://bugreports.qt.io/browse/QTBUG-81504)
-```
-# Sway and Hyprland bug: 
-export QT_QPA_PLATFORM=xcb
-export WAYLAND_DEBUG=client
-export QT_DEBUG_PLUGINS=1
+
 ```
 ## Run StarFab
 after splash screen UI can take sometime to appear, keep eye on terminal to spot for errors
