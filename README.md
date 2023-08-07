@@ -33,7 +33,8 @@ git clone https://gitlab.com/scmodding/frameworks/scdatatools.git frameworks/scd
 ```
 cd tools/starfab
 rm poetry.lock
-nano pyproject.toml # delete [[tool.poetry.dependencies.vtk]] entries
+# use editor to remove [[tool.poetry.dependencies.vtk]] entries
+nano pyproject.toml 
 ```
 ## Install recommended python using pyenv
 ```
