@@ -22,7 +22,7 @@ sudo dnf -y update
 ## 1. Get distro specific packages for compiling StarFab
 ```
 # Arch
-sudo pacman -S  --needed base-devel poetry qt5-base  openssl zlib xz tk
+sudo pacman -S  --needed nano base-devel poetry qt5-base openssl zlib xz tk
 
 libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
 
