@@ -28,7 +28,12 @@ sudo dnf -y builddep python3
 sudo apt install -y build-essential python3-poetry qtbase5-dev libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libasound2 libpulse-mainloop-glib0
 
 # Arch
-sudo pacman -S pyenv qtbase tk poetry glu nss libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
+sudo pacman -S  --needed base-devel poetry qtbase pyenv openssl zlib xz tk
+
+libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
+
+
+
 ```
 ## 2. Install PyEnv for bash shell
 [more info](https://github.com/pyenv/pyenv)
