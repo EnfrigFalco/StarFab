@@ -1,10 +1,20 @@
 # StarFab - Linux Guide
-Guide for running StarFab on Linux distos using toolbox (podman) container to avoid flooding OS with hundred of packages. Guide assumes you are using Fedora, process basically the same, see bottom for extra info on other distributions.
+Guide for running StarFab on Linux distos using toolbox (podman) container to avoid flooding OS with hundred of packages. Guide assumes you are using toolbox with a Fedora OCI, process basically the same, see bottom for extra info on other distributions.
 ## Setup a container
 ```
-toolbox create fedora
+# Fedora
+toolbox create --image fedoraproject.org/fedora-toolbox:38
 toolbox enter fedora
 sudo dnf -y update
+
+# Debian
+toolbox create --image quay.io/
+
+
+# Arch
+toolbox create --image quay.io/toolbx-images/archlinux-toolbox
+toolbox enter archlinux-toolbox
+sudo pacman -Syu
 ```
 ## Get basic dev tools,libraries, python build dependancies, extra packages for compiling StarFab, and a kitchen sink
 ```
@@ -69,4 +79,12 @@ poetry run python -m starfab
 ```
 ---
 ---
+Additional notes for compiling using other Linux distributions:
+### Arch
+```
+# Create an Arch container
+toolbox create --image quay.io/toolbx-images/archlinux-toolbox
+toolbox enter archlinux-toolbox
 
+# Install packages
+```
