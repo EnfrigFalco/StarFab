@@ -20,11 +20,7 @@ sudo dnf -y update
 ## 1. Get distro specific packages for compiling StarFab
 ```
 # Arch
-sudo pacman -S  --needed nano base-devel poetry qt5-base openssl zlib xz tk
-
-libxcomposite libxdamage libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
-
-pyenv
+sudo pacman -S  --needed nano base-devel poetry qt5-base openssl zlib xz tk nss libxcomposite libxrandr libxcursor libxi libxtst libxkbcommon alsa-lib libpulse
 
 # Debian
 sudo apt install -y build-essential python3-poetry qtbase5-dev libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libasound2 libpulse-mainloop-glib0
