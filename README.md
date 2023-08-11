@@ -25,7 +25,7 @@ sudo pacman -S  --needed nano base-devel poetry qt5-base openssl zlib xz tk nss 
 # Debian
 sudo apt install -y build-essential python3-poetry qtbase5-dev libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libasound2 libpulse-mainloop-glib0
 
-#Fedora
+# Fedora
 sudo dnf -y groupinstall "Development Tools" "Development Libraries"
 sudo dnf -y install poetry qt5-qtbase-devel libXcomposite libXdamage libXrandr libXcursor libXi libXtst alsa-lib pulseaudio-libs pulseaudio-libs-glib2
 sudo dnf -y builddep python3
