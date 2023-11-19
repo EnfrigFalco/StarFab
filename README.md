@@ -83,6 +83,7 @@ poetry run python -m pip install -e ../../frameworks/scdatatools
 
 ## (optional) Qt wayland bug workaround on sway, hypr, and other wayland compositors
 [more info](https://bugreports.qt.io/browse/QTBUG-81504)
+Can create also create problems, try only if Starfab is not rendering.
 ```
 export QT_QPA_PLATFORM=xcb
 ```
