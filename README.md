@@ -78,6 +78,7 @@ poetry env use python
 ## 6. Build StarFab
 ```
 poetry install
+poetry run python -m pip install -e ../../frameworks/scdatatools
 ```
 
 ## (optional) Qt wayland bug workaround on sway, hypr, and other wayland compositors
